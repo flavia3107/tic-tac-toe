@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    color: rgb(44, 41, 44);
+    background-color: rgb(247, 239, 247);
+}
+
+header{
+    background-color: rgb(140, 0, 255);
+    padding: 2rem 5%;
+    color: white;
+    text-align: center;
+}
+
+.main-title, 
+.name, 
+.sign{
+    margin-top: 0;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+font: inherit;
+padding: 0.5rem 1.5rem;
+background-color: rgb(140, 0, 255);
+border: 1px solid rgb(140, 0, 255);
+color: white;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.btn-alt{
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(140, 0, 255);
+}
+
+.btn:hover {
+background-color: rgb(79, 10, 190);
+border-color: rgb(79, 10, 190);
+}
+
+.btn-alt:hover{
+    background-color: rgb(245, 232, 255);  
+    border-color: transparent;
+}
