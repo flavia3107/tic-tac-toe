@@ -11,6 +11,7 @@ body{
     margin: 0;
     color: rgb(44, 41, 44);
     background-color: var( --body-background);
+    box-sizing: border-box;
 }
 
 header{
@@ -20,6 +21,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header a span{
+    color: white;
 }
 
 .title-game{
@@ -83,7 +88,6 @@ border-color: var(--hover);
 
   .logo img {
     height: 35px;
-    margin-left: 2em;
   }
 
   .logo-txt {
@@ -112,3 +116,47 @@ border-color: var(--hover);
     font-weight: lighter;
     font-size: 0.85rem;
   }
+
+@media only screen and (max-width: 900px) {
+#main-container {
+    overflow-x: hidden;   
+    width: 90%;
+    margin: auto;
+}
+
+#main-container.active{
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+.active #game-configuration .container{
+    flex-direction: row;
+}
+
+ #game-configuration .player-container{
+    width: 140px;
+    padding: 1rem 0;
+}
+
+ #game-configuration .name{
+     font-size: 1.3rem;
+ }
+
+.user-profile .material-icons {
+    display: none;
+}
+
+.active #user-1, .active #user-2{
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100px;
+}
+
+#active-game #game-over {
+    width: 90%;
+    padding: 5rem 0rem 1rem 0rem;
+}
+}

@@ -79,6 +79,10 @@ margin: 0.5rem 0;
     color: var(--font-color);
     font-size: 1.5rem;
     margin: 0.5rem 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
 }
 
 .sign{
