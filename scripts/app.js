@@ -32,6 +32,9 @@ const gameBoard = document.getElementById('game-board');
 const activePlayerName = document.getElementById('active-player-name');
 const gameOverElement = document.getElementById('game-over');
 
+const userProfile1 = document.getElementById('user-1');
+const userProfile2 = document.getElementById('user-2');
+
 editPlayer1BtnElement.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElement.addEventListener('click', openPlayerConfig);
 configCancelBtn.addEventListener('click', closePlayerConfig);

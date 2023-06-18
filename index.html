@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css-files/overlays.css">
     <link rel="stylesheet" href="css-files/configuration.css">
     <link rel="stylesheet" href="css-files/game.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Tic-Tac-Toe</title>
     <script src="scripts/config.js" defer></script>
     <script src="scripts/game.js" defer></script>
@@ -62,7 +63,23 @@
                 <p>Click "Start New Game" above, to start a new game!</p>
             </article>
 
-            <p>It's your turn <span id="active-player-name">player name</span></p>
+            <div class="profile-section">
+                <p class="user-profile">
+                    <span class="material-icons">
+                        person
+                    </span>
+                    <span id='user-1'></span>
+                </p>
+                <p>It's your turn <span id="active-player-name">player name</span></p>
+                <p class="user-profile">
+                    <span id='user-2'></span>
+                    <span class="material-icons">
+                        person
+                    </span>
+
+                </p>
+            </div>
+
             <ol id="game-board">
                 <li data-col="1" data-row="1"></li>
                 <li data-col="2" data-row="1"></li>

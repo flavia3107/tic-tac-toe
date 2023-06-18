@@ -20,7 +20,6 @@ header{
     text-align: center;
 }
 
-.main-title, 
 .name, 
 .sign{
     margin-top: 0;
@@ -59,4 +58,9 @@ border-color: var(--hover);
     background-color: var(--hover);
     color: white;  
     border-color: transparent;
+}
+
+.main-title{
+    text-align: start;
+    /* margin-top: -3.4rem; */
 }

@@ -24,6 +24,8 @@ function startNewGame() {
     }
 
     resetGame();
+    userProfile1.textContent = players[0].name;
+    userProfile2.textContent = players[1].name;
     activePlayerName.textContent = players[activePlayer].name;
     activeGameContainer.style.display = 'block';
     mainContainer.classList.add('active');
@@ -44,7 +46,6 @@ function selectGameField(event) {
     const columnIndex = selectedField.dataset.col - 1;
 
     if (gameData[rowIndex][columnIndex] > 0) {
-        alert('Please select an empty field!');
         return;
     }
        
