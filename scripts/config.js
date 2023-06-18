@@ -10,6 +10,7 @@ function closePlayerConfig() {
     formElement.firstElementChild.classList.remove('error');
     errorOutputElement.textContent = '';
     formElement.firstElementChild.lastElementChild.value = '';
+    gameOverElement.style.display = 'none';
 }
 
 function savePlayerConfig(event) {

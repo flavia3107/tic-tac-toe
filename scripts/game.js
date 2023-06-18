@@ -1,12 +1,13 @@
 function resetGame() {
     activePlayer = 0;
     currentRaund = 1;
-    gameOverElement.firstElementChild.innerHTML = `<h2>You won! <span id="winner-name">PLAYER NAME</span></h2>`
+    gameOverElement.children[1].textContent = 'You won!';
     gameOverElement.style.display = 'none';
     gameIsOver = false;
     arrowLeft.style.visibility = 'visible';
     arrowRight.style.visibility = 'hidden';
-    
+    backdrop.style.display = 'none';
+
     let gameBoardIndex = 0;
     for (let i = 0; i < 3; i++){
         for (let j = 0; j < 3; j++){
@@ -105,10 +106,17 @@ function checkForGameOver() {
 function endGame(winnerId) {
     gameOverElement.style.display = 'block';
     if (winnerId > 0) {
-        gameOverElement.firstElementChild.firstElementChild.textContent = players[winnerId - 1].name;
+        gameOverElement.firstElementChild.textContent = players[winnerId - 1].name;
     } else {
-        gameOverElement.firstElementChild.textContent = 'It\'s a draw!';
+        gameOverElement.children[1].textContent = 'It\'s a draw!';
+        gameOverElement.firstElementChild.textContent = '';
     }
 
+    backdrop.style.display = 'block';
     gameIsOver = true;
+}
+
+function closeModalMethod(){
+    backdrop.style.display = 'none';
+    gameOverElement.style.display = 'none';
 }

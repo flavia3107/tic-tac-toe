@@ -58,31 +58,17 @@
         <section id="active-game">
             <h1 class="main-title"> Play Tic, Tac, Toe</h1>
             <span>Built with HTML, CSS, Javascript</span>
-            <article id="game-over">
-                <h2>You won! <span id="winner-name">PLAYER NAME</span></h2>
-                <p>Click "Start New Game" above, to start a new game!</p>
-            </article>
-
             <div class="profile-section">
                 <p class="user-profile">
-                    <span class="material-icons">
-                        person
-                    </span>
+                    <span class="material-icons"> person </span>
                     <span id='user-1'></span>
                 </p>
-                <span class="material-icons" id="arrow-left">
-                    arrow_left
-                </span>
+                <span class="material-icons" id="arrow-left"> arrow_left </span>
                 <p>Turn</p>
-                <span class="material-icons" id="arrow-right">
-                    arrow_right
-                </span>
+                <span class="material-icons" id="arrow-right"> arrow_right </span>
                 <p class="user-profile">
                     <span id='user-2'></span>
-                    <span class="material-icons">
-                        person
-                    </span>
-
+                    <span class="material-icons"> person </span>
                 </p>
             </div>
 
@@ -99,7 +85,12 @@
                 <li data-col="2" data-row="3"></li>
                 <li data-col="3" data-row="3"></li>
             </ol>
-
+            <article class="modal" id="game-over">
+                <span id="winner-name">PLAYER NAME</span>
+                <h2>You won!</h2>
+                <p>Click "Start New Game" above, to start a new game!</p>
+                <button id="close-modal" class="btn btn-alt">Close</button>
+            </article>
         </section>
 
 

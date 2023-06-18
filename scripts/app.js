@@ -30,6 +30,7 @@ const startGame = document.getElementById('start-game');
 const activeGameContainer = document.getElementById('active-game');
 const gameBoard = document.getElementById('game-board');
 const gameOverElement = document.getElementById('game-over');
+const closeModal = document.getElementById('close-modal');
 
 const userProfile1 = document.getElementById('user-1');
 const userProfile2 = document.getElementById('user-2');
@@ -44,3 +45,4 @@ backdrop.addEventListener('click', closePlayerConfig);
 formElement.addEventListener('submit', savePlayerConfig);
 startGame.addEventListener('click', startNewGame);
 gameBoard.addEventListener('click', selectGameField);
+closeModal.addEventListener('click', closeModalMethod);
