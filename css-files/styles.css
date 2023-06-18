@@ -15,9 +15,19 @@ body{
 
 header{
     background-color: var(--primary-color);
-    padding: 2rem 5%;
+    padding: 1rem;
     color: white;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-game{
+    font-size: 1.3rem;
+    margin:0;    
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .name, 
@@ -65,3 +75,40 @@ border-color: var(--hover);
     text-align: start;
     margin: 1.6rem 0 0.5rem 0;
 }
+
+ .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 35px;
+    margin-left: 2em;
+  }
+
+  .logo-txt {
+    padding-left: 7px;
+    display: flex;
+    flex-direction: column;
+    color: var(--heading-color);
+  }
+
+  .logo-txt h1,
+  .logo-txt span {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-align: start;
+  }
+
+  .logo-txt h1 {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    margin-top: 2px;
+  }
+
+  .logo-txt span {
+    font-weight: lighter;
+    font-size: 0.85rem;
+  }
