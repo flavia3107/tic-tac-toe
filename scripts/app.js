@@ -19,6 +19,7 @@ const players = [
 const playerConfigOverlayElement = document.getElementById('config-overlay');
 const backdrop = document.getElementById('backdrop');
 const errorOutputElement = document.getElementById('config-errors');
+const mainContainer = document.getElementById('main-container');
 
 const editPlayer1BtnElement = document.getElementById('edit-player-1-btn');
 const editPlayer2BtnElement = document.getElementById('edit-player-2-btn');

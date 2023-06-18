@@ -26,6 +26,7 @@ function startNewGame() {
     resetGame();
     activePlayerName.textContent = players[activePlayer].name;
     activeGameContainer.style.display = 'block';
+    mainContainer.classList.add('active');
 }
 
 function switchPlayer() {

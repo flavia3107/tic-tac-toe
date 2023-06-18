@@ -87,3 +87,13 @@ margin: 0.5rem 0;
     color: rgb(47, 4, 82);
     margin: 0.5rem 0;
 }
+
+
+.active #game-configuration {
+    margin: 3rem 0;
+    max-width: 30rem;
+}
+
+.active .container{
+    flex-direction: column;
+}
