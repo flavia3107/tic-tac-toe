@@ -4,7 +4,9 @@ function resetGame() {
     gameOverElement.firstElementChild.innerHTML = `<h2>You won! <span id="winner-name">PLAYER NAME</span></h2>`
     gameOverElement.style.display = 'none';
     gameIsOver = false;
-
+    arrowLeft.style.visibility = 'visible';
+    arrowRight.style.visibility = 'hidden';
+    
     let gameBoardIndex = 0;
     for (let i = 0; i < 3; i++){
         for (let j = 0; j < 3; j++){
@@ -26,14 +28,21 @@ function startNewGame() {
     resetGame();
     userProfile1.textContent = players[0].name;
     userProfile2.textContent = players[1].name;
-    activePlayerName.textContent = players[activePlayer].name;
     activeGameContainer.style.display = 'block';
     mainContainer.classList.add('active');
 }
 
 function switchPlayer() {
     activePlayer = activePlayer === 0 ? 1 : 0;
-    activePlayerName.textContent = players[activePlayer].name;
+    
+    if (activePlayer === 0) {
+        arrowLeft.style.visibility = 'visible';
+        arrowRight.style.visibility = 'hidden';
+    } else {
+        arrowRight.style.visibility = 'visible';
+        arrowLeft.style.visibility = 'hidden';
+    }
+
 }
 
 function selectGameField(event) {

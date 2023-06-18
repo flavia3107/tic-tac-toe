@@ -24,7 +24,8 @@
 
 #active-player-name{
     font-weight: bold;
-    color: rgb(50, 5, 87);
+    color: var(--font-color);
+    text-transform: uppercase;
 }
 
 #game-board{
@@ -64,8 +65,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-width: 50rem;
-    margin: 3rem auto;
+    max-width: 55rem;
+    margin: 2rem auto;
 }
 
 .user-profile{
@@ -79,4 +80,23 @@
     font-size: 4rem;
     border: 2px solid;
     border-radius: 4px;
+}
+
+.user-profile .details{
+    display: flex;
+    flex-direction: column;
+}
+
+#user-1, #user-2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+ #arrow-right {
+    visibility: hidden;
+}
+
+#arrow-right, #arrow-left{
+    font-size: 3rem;
 }

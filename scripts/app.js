@@ -29,11 +29,12 @@ const formElement = document.querySelector('form');
 const startGame = document.getElementById('start-game');
 const activeGameContainer = document.getElementById('active-game');
 const gameBoard = document.getElementById('game-board');
-const activePlayerName = document.getElementById('active-player-name');
 const gameOverElement = document.getElementById('game-over');
 
 const userProfile1 = document.getElementById('user-1');
 const userProfile2 = document.getElementById('user-2');
+const arrowLeft = document.getElementById('arrow-left');
+const arrowRight = document.getElementById('arrow-right');
 
 editPlayer1BtnElement.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElement.addEventListener('click', openPlayerConfig);
