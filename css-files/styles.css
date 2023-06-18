@@ -1,11 +1,20 @@
+:root {
+  --primary-color: #000000;
+  --font-size-medium: 16px;
+  --card-color: #e1f0ffe8;
+  --body-background: #f9f9f9;
+  --font-color: #000000;
+  --hover: #383838;
+}
+
 body{
     margin: 0;
     color: rgb(44, 41, 44);
-    background-color: rgb(247, 239, 247);
+    background-color: var( --body-background);
 }
 
 header{
-    background-color: rgb(140, 0, 255);
+    background-color: var(--primary-color);
     padding: 2rem 5%;
     color: white;
     text-align: center;
@@ -26,27 +35,28 @@ main{
 }
 
 .btn {
-font: inherit;
-padding: 0.5rem 1.5rem;
-background-color: rgb(140, 0, 255);
-border: 1px solid rgb(140, 0, 255);
-color: white;
-border-radius: 4px;
-cursor: pointer;
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .btn-alt{
     background-color: transparent;
     border-color: transparent;
-    color: rgb(140, 0, 255);
+    color: var(--font-color);
 }
 
 .btn:hover {
-background-color: rgb(79, 10, 190);
-border-color: rgb(79, 10, 190);
+background-color: var(--hover);
+border-color: var(--hover);
 }
 
 .btn-alt:hover{
-    background-color: rgb(245, 232, 255);  
+    background-color: var(--hover);
+    color: white;  
     border-color: transparent;
 }
