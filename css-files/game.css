@@ -7,9 +7,9 @@
 
 #game-over{
     width: 100%;
-    max-width: 40rem;
+    max-width: 30rem;
     margin: auto;
-    padding: 1rem 2rem;
+    padding: 5rem 2rem 1rem 2rem;
     border-radius: 4px;
     display: none;
     text-align: center;
@@ -97,4 +97,17 @@
 
 #arrow-right, #arrow-left{
     font-size: 3rem;
+}
+
+#winner-name{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+button#close-modal{
+    margin-top: 4rem;
+}
+
+#game-over p{
+    color: #4b4b4b;
 }
