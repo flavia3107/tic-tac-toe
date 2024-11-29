@@ -1,162 +1,145 @@
 :root {
-  --primary-color: #000000;
-  --font-size-medium: 16px;
-  --card-color: #e1f0ffe8;
-  --body-background: #f9f9f9;
-  --font-color: #000000;
-  --hover: #383838;
+	--primary-color: #000000;
+	--font-size-medium: 16px;
+	--card-color: #e1f0ffe8;
+	--body-background: #f9f9f9;
+	--font-color: #000000;
+	--hover: #383838;
 }
 
-body{
-    margin: 0;
-    color: rgb(44, 41, 44);
-    background-color: var( --body-background);
-    box-sizing: border-box;
+body {
+	margin: 0;
+	color: rgb(44, 41, 44);
+	background-color: var(--body-background);
+	box-sizing: border-box;
 }
 
-header{
-    background-color: var(--primary-color);
-    padding: 1rem;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.name,
+.sign {
+	margin-top: 0;
 }
 
-header a span{
-    color: white;
-}
-
-.title-game{
-    font-size: 1.3rem;
-    margin:0;    
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.name, 
-.sign{
-    margin-top: 0;
-}
-
-main{
-    display: flex;
-    width: 100%;
-    min-height: 500px;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 1.4rem;
+main {
+	display: flex;
+	width: 100%;
+	min-height: 500px;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 1.4rem;
 }
 
 .btn {
-    font: inherit;
-    padding: 0.5rem 1.5rem;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+	font: inherit;
+	padding: 0.5rem 1.5rem;
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
-.btn-alt{
-    background-color: transparent;
-    border-color: transparent;
-    color: var(--font-color);
+.btn-alt {
+	background-color: transparent;
+	border-color: transparent;
+	color: var(--font-color);
 }
 
 .btn:hover {
-background-color: var(--hover);
-border-color: var(--hover);
+	background-color: var(--hover);
+	border-color: var(--hover);
 }
 
-.btn-alt:hover{
-    background-color: var(--hover);
-    color: white;  
-    border-color: transparent;
+.btn-alt:hover {
+	background-color: var(--hover);
+	color: white;
+	border-color: transparent;
 }
 
-.main-title{
-    text-align: start;
-    margin: 1.6rem 0 0.5rem 0;
+.main-title {
+	text-align: start;
+	margin: 1.6rem 0 0.5rem 0;
 }
 
- .logo {
-    display: flex;
-    align-items: center;
-  }
+.logo {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #000000;
+	padding: 0.5rem;
+}
 
-  .logo img {
-    height: 35px;
-  }
+.logo img {
+	height: 35px;
+}
 
-  .logo-txt {
-    padding-left: 7px;
-    display: flex;
-    flex-direction: column;
-    color: var(--heading-color);
-  }
+.logo-txt {
+	padding-left: 7px;
+	display: flex;
+	flex-direction: column;
+	color: var(--heading-color);
+}
 
-  .logo-txt h1,
-  .logo-txt span {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    letter-spacing: 4px;
-    text-align: start;
-  }
+.logo-txt h1,
+.logo-txt span {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	letter-spacing: 4px;
+	text-align: start;
+}
 
-  .logo-txt h1 {
-    font-weight: bolder;
-    font-size: 1.1rem;
-    margin-top: 2px;
-  }
+.logo-txt h1 {
+	font-weight: bolder;
+	font-size: 1.1rem;
+	margin-top: 2px;
+}
 
-  .logo-txt span {
-    font-weight: lighter;
-    font-size: 0.85rem;
-  }
+.logo-txt span {
+	font-weight: lighter;
+	font-size: 0.85rem;
+}
 
 @media only screen and (max-width: 900px) {
-#main-container {
-    overflow-x: hidden;   
-    width: 90%;
-    margin: auto;
-}
+	#main-container {
+		overflow-x: hidden;
+		width: 90%;
+		margin: auto;
+	}
 
-#main-container.active{
-    flex-direction: column;
-    width: 90%;
-    margin: auto;
-}
+	#main-container.active {
+		flex-direction: column;
+		width: 90%;
+		margin: auto;
+	}
 
-.active #game-configuration .container{
-    flex-direction: row;
-}
+	.active #game-configuration .container {
+		flex-direction: row;
+	}
 
- #game-configuration .player-container{
-    width: 140px;
-    padding: 1rem 0;
-}
+	#game-configuration .player-container {
+		width: 140px;
+		padding: 1rem 0;
+	}
 
- #game-configuration .name{
-     font-size: 1.3rem;
- }
+	#game-configuration .name {
+		font-size: 1.3rem;
+	}
 
-.user-profile .material-icons {
-    display: none;
-}
+	.user-profile .material-icons {
+		display: none;
+	}
 
-.active #user-1, .active #user-2{
-    font-size: 1rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100px;
-}
+	.active #user-1,
+	.active #user-2 {
+		font-size: 1rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		max-width: 100px;
+	}
 
-#active-game #game-over {
-    width: 90%;
-    padding: 5rem 0rem 1rem 0rem;
-}
+	#active-game #game-over {
+		width: 90%;
+		padding: 5rem 0rem 1rem 0rem;
+	}
 }
