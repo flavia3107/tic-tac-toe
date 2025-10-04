@@ -121,42 +121,20 @@ p {
 }
 
 @media only screen and (max-width: 900px) {
-	#main-container {
-		overflow-x: hidden;
-		width: 90%;
-		margin: auto;
-	}
-
-	#main-container.active {
-		flex-direction: column;
-		width: 90%;
-		margin: auto;
-	}
-
-	#game-configuration .player-container {
-		width: 140px;
-		padding: 1rem 0;
-	}
-
-	#game-configuration .name {
-		font-size: 1.3rem;
-	}
-
-	.user-profile .material-icons {
+	.user-profile.material-icons {
 		display: none;
-	}
-
-	.active #user-1,
-	.active #user-2 {
-		font-size: 1rem;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		max-width: 100px;
 	}
 
 	#active-game #game-over {
 		width: 90%;
 		padding: 5rem 0rem 1rem 0rem;
+	}
+
+	.player-details {
+		flex-direction: column;
+	}
+
+	.first {
+		flex-direction: column-reverse;
 	}
 }
