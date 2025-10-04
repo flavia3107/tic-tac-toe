@@ -34,9 +34,7 @@
 }
 
 #game-configuration {
-    width: 90%;
-    max-width: 40rem;
-    margin: 3rem auto;
+    margin: 0 auto 4rem;
     text-align: center;
 }
 

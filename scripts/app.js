@@ -32,8 +32,6 @@ const gameBoard = document.getElementById('game-board');
 const gameOverElement = document.getElementById('game-over');
 const closeModal = document.getElementById('close-modal');
 
-const userProfile1 = document.getElementById('user-1');
-const userProfile2 = document.getElementById('user-2');
 const arrowLeft = document.getElementById('arrow-left');
 const arrowRight = document.getElementById('arrow-right');
 

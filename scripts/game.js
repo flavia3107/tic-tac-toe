@@ -1,3 +1,5 @@
+let gameStarted = false;
+
 function resetGame() {
     activePlayer = 0;
     currentRaund = 1;
@@ -7,6 +9,7 @@ function resetGame() {
     arrowLeft.style.visibility = 'visible';
     arrowRight.style.visibility = 'hidden';
     backdrop.style.display = 'none';
+    gameStarted = false;
 
     let gameBoardIndex = 0;
     for (let i = 0; i < 3; i++) {
@@ -32,8 +35,8 @@ function startNewGame() {
     }
 
     resetGame();
-    userProfile1.textContent = players[0].name;
-    userProfile2.textContent = players[1].name;
+    startGame.style.visibility = 'hidden';
+    gameStarted = true;
 }
 
 function switchPlayer() {
@@ -50,29 +53,31 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-    if (event.target.tagName !== 'LI' || gameIsOver) {
-        return;
+    if (gameStarted) {
+        if (event.target.tagName !== 'LI' || gameIsOver) {
+            return;
+        }
+
+        const selectedField = event.target;
+        const rowIndex = selectedField.dataset.row - 1;
+        const columnIndex = selectedField.dataset.col - 1;
+
+        if (gameData[rowIndex][columnIndex] > 0) {
+            return;
+        }
+
+        selectedField.textContent = players[activePlayer].symbol;
+        selectedField.classList.add('disabled');
+        gameData[rowIndex][columnIndex] = activePlayer + 1;
+
+        const winner = checkForGameOver();
+        if (winner !== 0) {
+            endGame(winner);
+        }
+
+        currentRaund++;
+        switchPlayer();
     }
-
-    const selectedField = event.target;
-    const rowIndex = selectedField.dataset.row - 1;
-    const columnIndex = selectedField.dataset.col - 1;
-
-    if (gameData[rowIndex][columnIndex] > 0) {
-        return;
-    }
-
-    selectedField.textContent = players[activePlayer].symbol;
-    selectedField.classList.add('disabled');
-    gameData[rowIndex][columnIndex] = activePlayer + 1;
-
-    const winner = checkForGameOver();
-    if (winner !== 0) {
-        endGame(winner);
-    }
-
-    currentRaund++;
-    switchPlayer();
 }
 
 function checkForGameOver() {
@@ -117,6 +122,8 @@ function endGame(winnerId) {
 
     backdrop.style.display = 'block';
     gameIsOver = true;
+    startGame.style.visibility = 'visible';
+
 }
 
 function closeModalMethod() {
