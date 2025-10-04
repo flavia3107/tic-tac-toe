@@ -1,11 +1,11 @@
-#active-game{
+#active-game {
     /* text-align: center; */
     margin: 0rem 0 5rem 0;
-    display: none;
+    display: block;
     width: 100%;
 }
 
-#game-over{
+#game-over {
     width: 100%;
     max-width: 30rem;
     margin: auto;
@@ -15,20 +15,20 @@
     text-align: center;
 }
 
-#game-over h3{
+#game-over h3 {
     font-size: 2.5rem;
     margin: 0.5rem 0;
 }
 
-#active-player-name{
+#active-player-name {
     font-weight: bold;
     color: var(--font-color);
     text-transform: uppercase;
 }
 
-#game-board{
+#game-board {
     list-style: none;
-    margin:1rem 0;
+    margin: 1rem 0;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 6rem);
@@ -37,7 +37,7 @@
     gap: 0.5rem;
 }
 
-#game-board li{
+#game-board li {
     box-shadow: 0px 0px 3px #040c24;
     border-radius: 2px;
     cursor: pointer;
@@ -48,18 +48,18 @@
     font-weight: bold;
 }
 
-#game-board li:hover{
+#game-board li:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-#game-board li.disabled{
-       background-color: var(--primary-color);
-       cursor: default;
-       color: white;
+#game-board li.disabled {
+    background-color: var(--primary-color);
+    cursor: default;
+    color: white;
 }
 
-.profile-section{
+.profile-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -67,47 +67,49 @@
     margin: 2rem auto;
 }
 
-.user-profile{
+.user-profile {
     display: flex;
     align-items: center;
     gap: 1rem;
     text-transform: capitalize;
 }
 
-.user-profile .material-icons{
+.user-profile .material-icons {
     font-size: 4rem;
     border: 2px solid;
     border-radius: 4px;
 }
 
-.user-profile .details{
+.user-profile .details {
     display: flex;
     flex-direction: column;
 }
 
-#user-1, #user-2{
+#user-1,
+#user-2 {
     font-size: 1.2rem;
     font-weight: 700;
     text-decoration: underline;
 }
 
- #arrow-right {
+#arrow-right {
     visibility: hidden;
 }
 
-#arrow-right, #arrow-left{
+#arrow-right,
+#arrow-left {
     font-size: 3rem;
 }
 
-#winner-name{
+#winner-name {
     font-size: 2.5rem;
     font-weight: 900;
 }
 
-button#close-modal{
+button#close-modal {
     margin-top: 4rem;
 }
 
-#game-over p{
+#game-over p {
     color: #4b4b4b;
 }

@@ -26,7 +26,7 @@
             </div>
         </a>
     </header>
-    <main id="main-container">
+    <main id="main-container" class="active">
         <aside class="modal" id="config-overlay">
             <h2>Choose your name</h2>
             <form>
@@ -41,40 +41,36 @@
                 </div>
             </form>
         </aside>
-        <section id="game-configuration" class="player-containers">
-            <h2>Player Details</h2>
-            <div class="container">
-                <article class="player-container" id="player-1-data">
-                    <h1 class="player-desc">Player 1</h1>
-                    <h3 class="name">Name</h3>
-                    <p class="sign">X</p>
-                    <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">Edit</button>
-                </article>
-                <article class="player-container" id="player-2-data">
-                    <h1 class="player-desc">Player 2</h1>
-                    <h3 class="name">Name</h3>
-                    <p class="sign">0</p>
-                    <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">Edit</button>
-                </article>
-            </div>
-
-            <button id="start-game" class="btn">Start new Game</button>
-        </section>
         <section id="active-game">
-            <h1 class="main-title"> Play Tic, Tac, Toe</h1>
-            <span>Built with HTML, CSS, Javascript</span>
             <div class="profile-section">
-                <p class="user-profile">
-                    <span class="material-icons"> person </span>
-                    <span id='user-1'></span>
-                </p>
-                <span class="material-icons" id="arrow-left"> arrow_left </span>
-                <span class="material-icons" id="arrow-right"> arrow_right </span>
-                <p class="user-profile">
-                    <span id='user-2'></span>
-                    <span class="material-icons"> person </span>
-                </p>
+                <div class="player-details flex-row">
+                    <p class="user-profile">
+                        <span class="material-icons"> person </span>
+                        <span id='user-1'></span>
+                    </p>
+                    <div class="flex-column" id="player-1-data">
+                        <h1 class="player-desc">Player 1</h1>
+                        <p class="sign">X</p>
+                        <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">Edit</button>
+                    </div>
+                    <span class="material-icons" id="arrow-left"> arrow_left </span>
+                </div>
+                <div class="player-detials flex-row">
+                    <span class="material-icons" id="arrow-right"> arrow_right </span>
+                    <div class="flex-column" id="player-2-data">
+                        <h1 class="player-desc">Player 2</h1>
+                        <p class="sign">O</p>
+                        <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2">Edit</button>
+                    </div>
+                    <p class="user-profile">
+                        <span id='user-2'></span>
+                        <span class="material-icons"> person </span>
+                    </p>
+                </div>
             </div>
+            <section id="game-configuration" class="player-containers">
+                <button id="start-game" class="btn">Start new Game</button>
+            </section>
 
             <ol id="game-board">
                 <li data-col="1" data-row="1"></li>

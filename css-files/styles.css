@@ -5,17 +5,18 @@
 	--body-background: #f9f9f9;
 	--font-color: #000000;
 	--hover: #383838;
+
+	min-height: 100%;
 }
 
 body {
 	margin: 0;
 	color: rgb(44, 41, 44);
-	background-color: var(--body-background);
+	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 	box-sizing: border-box;
 }
 
-.name,
-.sign {
+.name {
 	margin-top: 0;
 }
 
@@ -99,6 +100,17 @@ main {
 	font-size: 0.85rem;
 }
 
+.flex-row {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
 @media only screen and (max-width: 900px) {
 	#main-container {
 		overflow-x: hidden;
@@ -110,10 +122,6 @@ main {
 		flex-direction: column;
 		width: 90%;
 		margin: auto;
-	}
-
-	.active #game-configuration .container {
-		flex-direction: row;
 	}
 
 	#game-configuration .player-container {

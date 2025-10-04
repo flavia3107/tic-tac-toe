@@ -1,47 +1,46 @@
-#config-overlay{
+#config-overlay {
     text-align: center;
 }
 
-#config-overlay h2{
-margin: 0.5rem 0;
+#config-overlay h2 {
+    margin: 0.5rem 0;
 }
 
-.form-control{
-margin: 0.5rem 0;
+.form-control {
+    margin: 0.5rem 0;
 }
 
-.form-control label{
- display: block;   
- margin-bottom: 0.5rem;
- font-weight: bold;
+.form-control label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
-.form-control input{
+.form-control input {
     font: inherit;
     border: 1px solid rgb(204, 204, 204);
     width: 15rem;
-    padding: 0.35rem
+    padding: 0.35rem;
 }
 
-.error label{
-    color: rgb(136, 2, 2);   
+.error label {
+    color: rgb(136, 2, 2);
 }
 
-.error input{
+.error input {
     border-color: rgb(136, 2, 2);
     color: rgb(136, 2, 2);
     background-color: rgb(253, 210, 219);
 }
 
-#game-configuration{
+#game-configuration {
     width: 90%;
     max-width: 40rem;
     margin: 3rem auto;
     text-align: center;
 }
 
-
-.player-containers{
+.player-containers {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -49,14 +48,14 @@ margin: 0.5rem 0;
     align-items: center;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 0;
 }
 
-.player-container{
+.player-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,12 +69,12 @@ margin: 0.5rem 0;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
 }
 
-.player-desc{
+.player-desc {
     font-size: 1rem;
     margin: 0.5rem 0;
 }
 
-.name{
+.name {
     color: var(--font-color);
     font-size: 1.5rem;
     margin: 0.5rem 0;
@@ -85,19 +84,13 @@ margin: 0.5rem 0;
     width: 100%;
 }
 
-.sign{
-    font-size: 2rem;
+.sign {
+    font-size: 1rem;
     font-weight: bold;
     color: var(--font-color);
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
-
-.active #game-configuration {
-    margin: 3rem 0;
-    max-width: 30rem;
-}
-
-.active .container{
+.active .container {
     flex-direction: column;
 }

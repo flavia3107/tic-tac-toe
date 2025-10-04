@@ -9,8 +9,8 @@ function resetGame() {
     backdrop.style.display = 'none';
 
     let gameBoardIndex = 0;
-    for (let i = 0; i < 3; i++){
-        for (let j = 0; j < 3; j++){
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
             gameData[i][j] = 0;
             const gameBoardItem = gameBoard.children[gameBoardIndex];
             gameBoardItem.textContent = '';
@@ -22,20 +22,23 @@ function resetGame() {
 
 function startNewGame() {
     if (players.some(player => !player.name)) {
-        alert('Please set player names for both player!');
+        alert('Please set player names for both players!');
+        return;
+    }
+
+    if (players[0].name === players[1].name) {
+        alert('Please set different player names for both players!');
         return;
     }
 
     resetGame();
     userProfile1.textContent = players[0].name;
     userProfile2.textContent = players[1].name;
-    activeGameContainer.style.display = 'block';
-    mainContainer.classList.add('active');
 }
 
 function switchPlayer() {
     activePlayer = activePlayer === 0 ? 1 : 0;
-    
+
     if (activePlayer === 0) {
         arrowLeft.style.visibility = 'visible';
         arrowRight.style.visibility = 'hidden';
@@ -58,7 +61,7 @@ function selectGameField(event) {
     if (gameData[rowIndex][columnIndex] > 0) {
         return;
     }
-       
+
     selectedField.textContent = players[activePlayer].symbol;
     selectedField.classList.add('disabled');
     gameData[rowIndex][columnIndex] = activePlayer + 1;
@@ -74,15 +77,15 @@ function selectGameField(event) {
 
 function checkForGameOver() {
     // check rows
-    for (let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         if (gameData[i][0] > 0 && gameData[i][0] === gameData[i][1] && gameData[i][0] === gameData[i][2]) {
             return gameData[i][0];
         }
     }
 
     // check columns
-    for (let j = 0; j < 3; j++){
-        if (gameData[0][j] > 0 &&    gameData[0][j] === gameData[1][j] && gameData[0][j] === gameData[2][j]) {
+    for (let j = 0; j < 3; j++) {
+        if (gameData[0][j] > 0 && gameData[0][j] === gameData[1][j] && gameData[0][j] === gameData[2][j]) {
             return gameData[0][j];
         }
     }
@@ -91,7 +94,7 @@ function checkForGameOver() {
     if (gameData[0][0] > 0 && gameData[0][0] === gameData[1][1] && gameData[1][1] === gameData[2][2]) {
         return gameData[0][0];
     }
-    
+
     // check secondary diagonal
     if (gameData[2][0] > 0 && gameData[2][0] === gameData[1][1] && gameData[0][2] === gameData[1][1]) {
         return gameData[2][0];
@@ -116,7 +119,7 @@ function endGame(winnerId) {
     gameIsOver = true;
 }
 
-function closeModalMethod(){
+function closeModalMethod() {
     backdrop.style.display = 'none';
     gameOverElement.style.display = 'none';
 }
