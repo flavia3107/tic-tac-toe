@@ -67,22 +67,11 @@
     margin: 2rem auto;
 }
 
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-transform: capitalize;
-}
-
-.user-profile .material-icons {
+.user-profile.material-icons {
     font-size: 4rem;
     border: 2px solid;
     border-radius: 4px;
-}
-
-.user-profile .details {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 #user-1,
